@@ -1,14 +1,14 @@
 ---
 projects:
-  homebrew:
+  beam:
     order: 1
-    name: Homebrew
+    name: Beam
     status: "-"
     command_line:
-      - Homebrew
-    start_date: 2015-01-01T00:00:00Z
+      - apache
+    start_date: 2018-08-20T00:00:00Z
     join_date: null
-    psql_db: homebrew
-    main_repo: 'Homebrew/brew'
+    psql_db: beam
+    main_repo: 'apache/beam'
     annotation_regexp: '^\d+\.\d+\.\d+$'
     files_skip_pattern: ''

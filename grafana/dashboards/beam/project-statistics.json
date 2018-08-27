@@ -148,7 +148,7 @@
   "style": "dark",
   "tags": [
     "dashboard",
-    "homebrew",
+    "beam",
     "table"
   ],
   "templating": {
@@ -156,8 +156,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "Homebrew",
-          "value": "Homebrew"
+          "text": "Beam",
+          "value": "Beam"
         },
         "datasource": "psql",
         "hide": 2,

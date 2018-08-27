@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -z "$ONLY" ]
 then
-  all="homebrew"
+  all="beam"
 else
   all=$ONLY
 fi

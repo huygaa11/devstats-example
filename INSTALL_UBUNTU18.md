@@ -45,7 +45,7 @@ Prerequisites:
     - Set bigger maximum number of connections, at least 4x number of your CPU cores or more: `/etc/postgresql/10/main/postgresql.conf`. Default is 100. `max_connections = 300`.
     - You can also set `shared_buffers = ...` to something like 25% of your RAM. This is optional.
     - `service postgresql restart`
-8. Clone `devstats-example`. It demonstrates DevStats setup for a `github.com/homebrew` org.
+8. Clone `devstats-example`. It demonstrates DevStats setup for a `github.com/beam` org.
     - `git clone https://github.com/cncf/devstats-example.git`, cd `devstats`
     - See `SETUP_OTHER_PROJECT.md` to see how to enable DevStats on your own project.
 9. Install Grafana.

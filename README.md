@@ -1,4 +1,4 @@
-# Example DevStats deployment - Homebrew
+# Example DevStats deployment - Beam
 
 This is installed [here](http://147.75.97.234:3001), it uses neither DNS nor SSL.
 

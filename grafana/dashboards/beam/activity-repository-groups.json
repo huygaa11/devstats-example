@@ -363,15 +363,15 @@
   "style": "dark",
   "tags": [
     "dashboard",
-    "homebrew"
+    "beam"
   ],
   "templating": {
     "list": [
       {
         "allValue": null,
         "current": {
-          "text": "Homebrew",
-          "value": "Homebrew"
+          "text": "Beam",
+          "value": "Beam"
         },
         "datasource": "psql",
         "hide": 2,

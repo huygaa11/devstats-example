@@ -191,7 +191,7 @@
       "starred": false,
       "tags": [
         "dashboard",
-        "homebrew"
+        "beam"
       ],
       "title": "All [[full_name]] Dashboards",
       "transparent": false,
@@ -204,15 +204,15 @@
   "tags": [
     "home",
     "all",
-    "homebrew"
+    "beam"
   ],
   "templating": {
     "list": [
       {
         "allValue": null,
         "current": {
-          "text": "Homebrew",
-          "value": "Homebrew"
+          "text": "Beam",
+          "value": "Beam"
         },
         "datasource": "psql",
         "hide": 2,
