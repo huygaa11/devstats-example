@@ -6,7 +6,7 @@ projects:
     status: "-"
     command_line:
       - apache
-    start_date: 2018-08-20T00:00:00Z
+    start_date: 2018-09-03T00:00:00Z
     join_date: null
     psql_db: beam
     main_repo: 'apache/beam'
