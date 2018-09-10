@@ -57,7 +57,7 @@ then
       ./devel/ro_user_grants.sh "$PROJDB" || exit 15
       ./devel/psql_user_grants.sh "devstats_team" "$PROJDB" || exit 16
       dbcreated=1
-      cron_db_backup.sh "$PROJDB" || exit 17
+      # cron_db_backup.sh "$PROJDB" || exit 17
     fi
   else
     echo "postgres database $PROJDB already exists"
@@ -91,10 +91,10 @@ then
   then
     GHA2DB_PROJECT="$PROJ" PG_DB="$PROJDB" ./gha2db_sync || exit 20
   fi
-  if [ ! -z "$REINIT" ]
-  then
-    cron_db_backup.sh "$PROJDB" || exit 24
-  fi
+  #if [ ! -z "$REINIT" ]
+  #then
+  #  cron_db_backup.sh "$PROJDB" || exit 24
+  #fi
 else
   echo "TS database $PROJDB generation skipped"
 fi
