@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres
+    ports:
+      - "5432:5432"
+    container_name: postgrescontainer
+    volumes:
+      - beam-postgresql-data:/var/lib/postgresql/data
+volumes:
+  beam-postgresql-data:
