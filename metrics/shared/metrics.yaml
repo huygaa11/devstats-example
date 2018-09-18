@@ -53,3 +53,11 @@ metrics:
     periods: d,w,m,q,y
     aggregate: 1,7
     skip: w7,m7,q7,y7
+  - name: PRs age
+    series_name_or_func: multi_row_multi_column
+    sql: prs_age
+    periods: d,w,m,q,y
+    aggregate: 1,7
+    skip: w7,m7,q7,y7
+    desc: time_diff_as_string
+    merge_series: prs_age
