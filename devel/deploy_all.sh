@@ -42,7 +42,7 @@ then
   ./devel/init_database.sh || exit 1
 fi
 
-PROJ=beam PROJDB=beam PROJREPO="apache/beam" ORGNAME="Apache" PORT=3001 ICON="-" GRAFSUFF=beam GA="-" ./devel/deploy_proj.sh || exit 2
+PROJ=beam PROJDB=beam PROJREPO="apache/beam" ORGNAME="Beam" PORT=3001 ICON="-" GRAFSUFF=beam GA="-" ./devel/deploy_proj.sh || exit 2
 
 if [ -z "$SKIPVARS" ]
 then

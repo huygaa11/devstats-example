@@ -6,9 +6,10 @@ projects:
     status: "-"
     command_line:
       - apache
+      - beam
     start_date: 2018-09-03T00:00:00Z
     join_date: null
     psql_db: beam
     main_repo: 'apache/beam'
-    annotation_regexp: '^\d+\.\d+\.\d+$'
+    annotation_regexp: '^v\d+\.\d+\.\d+$'
     files_skip_pattern: ''
