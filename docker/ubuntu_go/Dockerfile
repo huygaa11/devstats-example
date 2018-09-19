@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
-RUN apt-get update -y
 
+# Install locales
+RUN apt-get update -y
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y locales
 
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
@@ -9,10 +10,13 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 
 ENV LANG en_US.UTF-8 
 
+# Install go
 RUN apt install golang -y
 RUN DEBIAN_FRONTEND=noninteractive apt install git psmisc jsonlint yamllint gcc -y
 
+# Make working directories
 RUN mkdir /data; mkdir /data/dev
+RUN chmod -R ugo+rw /data/
 
 ENV GOPATH /data/dev
 ENV PATH "${GOPATH}/bin:${PATH}"
@@ -23,7 +27,7 @@ RUN go get -u github.com/golang/lint/golint && \
 	go get github.com/jgautheron/usedexports && \
 	go get github.com/kisielk/errcheck
 
-
+# Download and build devstats
 RUN cd $GOPATH/src/ && \
 	git clone https://github.com/cncf/devstats.git devstats && \
 	cd devstats && \
@@ -33,5 +37,8 @@ RUN cd $GOPATH/src/ && \
 
 RUN apt-get install -y postgresql-client postgresql sudo gosu
 
-RUN chmod -R ugo+rw /data/
-
+# Download grafana
+RUN apt-get install -y vim libfontconfig wget
+RUN apt-get update -y
+RUN wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_5.2.4_amd64.deb
+RUN sudo dpkg -i grafana_5.2.4_amd64.deb
