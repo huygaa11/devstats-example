@@ -83,3 +83,11 @@ metrics:
     aggregate: 1,28
     skip: d,w28,m28,q28,y28
     merge_series: episodic_contributors
+  - name: Opened to merged
+    series_name_or_func: multi_row_multi_column
+    sql: opened_to_merged
+    periods: d,w,m,q,y
+    aggregate: 1,7
+    skip: d,w7,m7,q7,y7
+    desc: time_diff_as_string
+    merge_series: opened_to_merged
