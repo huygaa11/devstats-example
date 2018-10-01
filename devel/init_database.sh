@@ -52,7 +52,8 @@ then
   sudo -u postgres psql -c "create user devstats_team with password '$PG_PASS_TEAM'" || exit 11
   sudo -u postgres psql -c "grant all privileges on database \"devstats\" to gha_admin" || exit 12
   sudo -u postgres psql -c "alter user gha_admin createdb" || exit 13
-  sudo -u postgres psql devstats < ./util_sql/devstats_log_table.sql || exit 14
+  sudo -u postgres psql -c "grant gha_admin to postgres" || exit 14
+  sudo -u postgres psql devstats < ./util_sql/devstats_log_table.sql || exit 15
   ./devel/ro_user_grants.sh devstats || exit 15
   ./devel/psql_user_grants.sh "devstats_team" "devstats" || exit 16
 else
