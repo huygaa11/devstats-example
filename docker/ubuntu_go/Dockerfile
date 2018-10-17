@@ -21,7 +21,7 @@ RUN chmod -R ugo+rw /data/
 ENV GOPATH /data/dev
 ENV PATH "${GOPATH}/bin:${PATH}"
 
-RUN go get -u github.com/golang/lint/golint && \
+RUN go get -u golang.org/x/lint/golint && \
 	go get golang.org/x/tools/cmd/goimports && \
 	go get github.com/jgautheron/goconst/cmd/goconst && \
 	go get github.com/jgautheron/usedexports && \
